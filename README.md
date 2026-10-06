@@ -41,3 +41,15 @@ This project uses React, Vinext, Tailwind CSS, and a Cloudflare Workers-compatib
 The app does not save writing history. Text is sent to OpenAI when a live rewrite is requested. Requests use `store: false`; provider data policies still apply. Review revisions for factual accuracy and preservation of quotations and citations.
 
 Before making the app publicly available, configure access controls and usage limits for the rewriting endpoint.
+
+## GitHub Pages edition
+
+The static edition is published from `docs/` on the `main` branch. It includes the editor, prepared example, and export controls. Live AI rewriting is disabled because GitHub Pages does not run the server endpoint.
+
+After changing the frontend, rebuild and commit `docs/`:
+
+```sh
+npm run build:pages
+```
+
+The static entry is `pages/index.html`; it reuses the React screen and styles from `app/`.
